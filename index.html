@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+	<html lang="en" >
+	
+	<head>
+	
+	 
+	 
+	  
+	<style>
+		body{
+			text-align: center;
+		}
+		#ghu{
+			background-color: palevioletred;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			width: 350px;
+			font-size: 150%;
+			text-align: center;
+			border-radius: 5%;
+		}
+		#gu{
+			background-color: rgb(26, 230, 135);
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			width: 350px;
+			font-size: 150%;
+			text-align: center;
+			border-radius: 5%;
+		}
+	.main-content {
+	  margin-top:50px;
+	}
+	
+	.block-container {
+	  width: 50%;
+	  float:left;
+	}
+	
+	.dice {
+	  border-radius: 10px;
+	  width:50px;
+	  height:50px;
+	}
+	#h{
+		border: solid burlywood;
+		width:600px;
+		background-color: aqua;
+		border-radius: 4px;
+	}
+	button{
+		background-color: blue;
+		border:none;
+		border-radius: 4px;
+		width:100px;
+		height: 40px;
+		font-weight: bolder;
+		color: white;
+	}
+	</style>
+	
+	  
+	  
+	  
+	  
+	
+	</head>
+	
+	<body translate="no" >
+		<br><br>
+		<center>
+		<div id="h"><h1>Dice Game By Swapnil</h1> <img id="dice" class="dice" src="j1.png"><br><br>	<button type="button" onclick="rollDice();" class="btn btn-primary">Roll the dice</button>	<p id="ghu"></p>
+			<p id="gu"></p>
+			<br>
+	  <div class="container col-sm-12 col-md-5 main-content">
+		<div class="block-container">
+		
+			 
+		
+		<div class="block-container">
+	
+	
+	  </div></div></div></div>
+	</center>
+	  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+		  <script id="readed-js" >
+	var path = '';
+	
+	function generateRandomNumber() {
+	  return Math.floor(Math.random() * 6) + 1;
+	}
+	
+	function defineImgPath(result) {
+	  switch (result) {
+		case 1:
+		  path = "j";
+		  break;
+		case 2:
+		  path = "j";
+		  break;
+		case 3:
+		  path = "j";
+		  break;
+		case 4:
+		  path = "j";
+		  break;
+		case 5:
+		  path = "j";
+		  break;
+	    case 6:
+		  path = "j";
+		  break;
+	  }
+	}
+	
+	function changeDiceFace(result) {
+		if(result > 5){
+	  alert("You win.");
+	  document.getElementById("gu").innerHTML = "You win";
+	  }
+	  else{
+		  alert("You lose. Try once again.");
+		  document.getElementById("ghu").innerHTML = "You lose. Try once again.";
+
+	  }
+	  var dice = document.querySelector('#dice');
+	  dice.setAttribute("src", path + result + ".png");
+	}
+	
+	function rollDice() {
+	  var result = generateRandomNumber();
+	  defineImgPath(result);
+	  changeDiceFace(result);
+	
+	  return false;
+	}
+		</script>
+	
+	  
+	
+	</body>
+	
+	</html>
+	 
+	
